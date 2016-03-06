@@ -13,6 +13,6 @@ CMake will read this property from all target dependencies to determine the
 sources of the consumer.
 
 Contents of ``INTERFACE_SOURCES`` may use "generator expressions"
-with the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
-manual for available expressions.  See the :manual:`cmake-buildsystem(7)`
+with the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
+manual for available expressions.  See the :manual:`cmake3-buildsystem(7)`
 manual for more on defining buildsystem properties.

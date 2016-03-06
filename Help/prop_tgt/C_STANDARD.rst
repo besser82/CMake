@@ -23,7 +23,7 @@ flag will not result in an error or warning, but will instead add the
 ``-std=gnu99`` or ``-std=gnu90`` flag if supported.  This "decay" behavior may
 be controlled with the :prop_tgt:`C_STANDARD_REQUIRED` target property.
 
-See the :manual:`cmake-compile-features(7)` manual for information on
+See the :manual:`cmake3-compile-features(7)` manual for information on
 compile features and a list of supported compilers.
 
 This property is initialized by the value of

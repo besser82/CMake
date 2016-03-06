@@ -1,4 +1,4 @@
-set(CMAKE_EXECUTABLE "${CMake_BIN_DIR}/cmake")
+set(CMAKE_EXECUTABLE "${CMake_BIN_DIR}/cmake3")
 
 
 macro(AddCMakeTest TestName PreArgs)

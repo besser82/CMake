@@ -741,16 +741,16 @@ if(APPLE)
 endif()
 
 # Build CMake executable
-add_executable(cmake cmakemain.cxx cmcmd.cxx cmcmd.h ${MANIFEST_FILE})
-target_link_libraries(cmake CMakeLib)
+add_executable(cmake3 cmakemain.cxx cmcmd.cxx cmcmd.h ${MANIFEST_FILE})
+target_link_libraries(cmake3 CMakeLib)
 
 # Build CTest executable
-add_executable(ctest ctest.cxx ${MANIFEST_FILE})
-target_link_libraries(ctest CTestLib)
+add_executable(ctest3 ctest.cxx ${MANIFEST_FILE})
+target_link_libraries(ctest3 CTestLib)
 
 # Build CPack executable
-add_executable(cpack CPack/cpack.cxx ${MANIFEST_FILE})
-target_link_libraries(cpack CPackLib)
+add_executable(cpack3 CPack/cpack.cxx ${MANIFEST_FILE})
+target_link_libraries(cpack3 CPackLib)
 
 # Curses GUI
 if(BUILD_CursesDialog)
@@ -768,7 +768,7 @@ include (${CMake_SOURCE_DIR}/Source/LocalUserOptions.cmake OPTIONAL)
 
 # Install tools
 
-set(_tools cmake ctest cpack)
+set(_tools cmake3 ctest3 cpack3)
 
 if(APPLE)
   list(APPEND _tools cmakexbuild)

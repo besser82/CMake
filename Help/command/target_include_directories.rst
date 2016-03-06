@@ -37,8 +37,8 @@ is used together with ``PUBLIC`` or ``INTERFACE``, the
 populated with the specified directories.
 
 Arguments to ``target_include_directories`` may use "generator expressions"
-with the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
-manual for available expressions.  See the :manual:`cmake-buildsystem(7)`
+with the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
+manual for available expressions.  See the :manual:`cmake3-buildsystem(7)`
 manual for more on defining buildsystem properties.
 
 Include directories usage requirements commonly differ between the build-tree

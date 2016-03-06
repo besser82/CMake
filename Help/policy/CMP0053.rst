@@ -5,7 +5,7 @@ Simplify variable reference and escape sequence evaluation.
 
 CMake 3.1 introduced a much faster implementation of evaluation of the
 :ref:`Variable References` and :ref:`Escape Sequences` documented in the
-:manual:`cmake-language(7)` manual.  While the behavior is identical
+:manual:`cmake3-language(7)` manual.  While the behavior is identical
 to the legacy implementation in most cases, some corner cases were
 cleaned up to simplify the behavior.  Specifically:
 
@@ -32,7 +32,7 @@ cleaned up to simplify the behavior.  Specifically:
   escape. Now any non-alphanumeric, non-semicolon, non-NUL
   character may be escaped following the ``escape_identity``
   production in the :ref:`Escape Sequences` section of the
-  :manual:`cmake-language(7)` manual.
+  :manual:`cmake3-language(7)` manual.
 
 The ``OLD`` behavior for this policy is to honor the legacy behavior for
 variable references and escape sequences.  The ``NEW`` behavior is to

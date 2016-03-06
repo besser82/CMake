@@ -10,5 +10,5 @@ semicolons. This property is initialized by the value of the
 a target is created.
 
 Contents of ``ANDROID_JAR_DIRECTORIES`` may use "generator expressions"
-with the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
+with the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
 manual for available expressions.

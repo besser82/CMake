@@ -13,4 +13,4 @@ property is initialized by the value of the
 it is set when a target is created.
 
 Contents of ``RUNTIME_OUTPUT_DIRECTORY_<CONFIG>`` may use
-:manual:`generator expressions <cmake-generator-expressions(7)>`.
+:manual:`generator expressions <cmake3-generator-expressions(7)>`.

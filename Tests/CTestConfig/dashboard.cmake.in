@@ -5,7 +5,7 @@ set(CTEST_BINARY_DIRECTORY "@CMake_BINARY_DIR@/Tests/CTestConfig/@cfg@-dashboard
 file(MAKE_DIRECTORY "${CTEST_BINARY_DIRECTORY}")
 
 get_filename_component(dir "${CMAKE_COMMAND}" PATH)
-set(CMAKE_CTEST_COMMAND "${dir}/ctest")
+set(CMAKE_CTEST_COMMAND "${dir}/ctest3")
 
 message("CMAKE_COMMAND='${CMAKE_COMMAND}'")
 message("CMAKE_CTEST_COMMAND='${CMAKE_CTEST_COMMAND}'")

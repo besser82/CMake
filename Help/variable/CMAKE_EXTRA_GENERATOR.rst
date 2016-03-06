@@ -2,7 +2,7 @@ CMAKE_EXTRA_GENERATOR
 ---------------------
 
 The extra generator used to build the project.  See
-:manual:`cmake-generators(7)`.
+:manual:`cmake3-generators(7)`.
 
 When using the Eclipse, CodeBlocks or KDevelop generators, CMake
 generates Makefiles (:variable:`CMAKE_GENERATOR`) and additionally project

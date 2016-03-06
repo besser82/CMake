@@ -183,18 +183,18 @@ CPack
 Other
 -----
 
-* The :manual:`cmake(1)` ``-E tar`` command now supports creating
+* The :manual:`cmake3(1)` ``-E tar`` command now supports creating
   ``.xz``-compressed archives with the ``J`` flag.
 
-* The :manual:`cmake(1)` ``-E tar`` command learned a new
+* The :manual:`cmake3(1)` ``-E tar`` command learned a new
   ``--files-from=<file>`` option to specify file names using
   lines in a file to overcome command-line length limits.
 
-* The :manual:`cmake(1)` ``-E tar`` command learned a new
+* The :manual:`cmake3(1)` ``-E tar`` command learned a new
   ``--mtime=<date>`` option to specify the modification time
   recorded in tarball entries.
 
-* The :manual:`Compile Features <cmake-compile-features(7)>` functionality
+* The :manual:`Compile Features <cmake3-compile-features3(7)>` functionality
   is now aware of features supported by more compilers, including:
 
   * Apple Clang (``AppleClang``) for Xcode versions 4.4 though 6.1.
@@ -216,7 +216,7 @@ New Diagnostics
 Deprecated and Removed Features
 ===============================
 
-* Files written in the :manual:`cmake-language(7)`, such as
+* Files written in the :manual:`cmake3-language(7)`, such as
   ``CMakeLists.txt`` or ``*.cmake`` files, are now expected to be
   encoded as UTF-8.  If files are already ASCII, they will be
   compatible.  If files were in a different encoding, including
