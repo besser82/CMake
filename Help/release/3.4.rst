@@ -40,10 +40,10 @@ Commands
   command.  See policy :policy:`CMP0064`.
 
 * The :command:`install(DIRECTORY)` command ``DESTINATION`` option learned to
-  support :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  support :manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 * The :command:`install(FILES)` command ``DESTINATION`` option learned to
-  support :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  support :manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 * The :command:`string` command learned a new ``APPEND`` subcommand.
 
@@ -88,13 +88,13 @@ Properties
 * The :prop_tgt:`ARCHIVE_OUTPUT_DIRECTORY`,
   :prop_tgt:`LIBRARY_OUTPUT_DIRECTORY`, and
   :prop_tgt:`RUNTIME_OUTPUT_DIRECTORY` target properties learned to
-  support :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  support :manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 * The :prop_tgt:`SOURCE_DIR` and :prop_tgt:`BINARY_DIR` target properties
   were introduced to allow project code to query where a target is defined.
 
 * The :prop_tgt:`OUTPUT_NAME` target property and its variants learned to
-  support :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  support :manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 * A :prop_gbl:`TARGET_MESSAGES` global property was added to tell the
   :ref:`Makefile Generators` whether to generate commands to print output
@@ -176,7 +176,7 @@ Generator Expressions
 ---------------------
 
 * A new ``$<SHELL_PATH:...>``
-  :manual:`generator expression <cmake-generator-expressions(7)>`
+  :manual:`generator expression <cmake3-generator-expressions(7)>`
   has been added.
 
 CTest
@@ -184,12 +184,12 @@ CTest
 
 * CTest learned to optionally measure the CPU load during parallel
   testing and avoid starting tests that may cause the load to exceed
-  a given threshold.  See the :manual:`ctest(1)` command ``--test-load``
+  a given threshold.  See the :manual:`ctest3(1)` command ``--test-load``
   option, the ``TestLoad`` setting of the :ref:`CTest Test Step`,
   the :variable:`CTEST_TEST_LOAD` variable, and the ``TEST_LOAD``
   option of the :command:`ctest_test` command.
 
-* :manual:`ctest(1)` learned options
+* :manual:`ctest3(1)` learned options
   ``--test-output-size-passed`` and ``--test-output-size-failed``
   to customize the limit on test output size submitted when
   running as a :ref:`Dashboard Client`.
@@ -219,7 +219,7 @@ CPack
 Other
 -----
 
-* The :manual:`Compile Features <cmake-compile-features(7)>` functionality
+* The :manual:`Compile Features <cmake3-compile-features(7)>` functionality
   is now aware of features supported by GNU C compilers on Windows.
 
 * CMake learned to honor ``*.manifest`` source files with MSVC tools.
@@ -230,7 +230,7 @@ Other
 * The `Concurrent Fortran 77 <https://ccur.com>`__ compiler is now supported.
   Its :variable:`compiler id <CMAKE_<LANG>_COMPILER_ID>` is ``CCur``.
 
-* :manual:`cmake(1)` gained a new ``--trace-expand`` command line option
+* :manual:`cmake3(1)` gained a new ``--trace-expand`` command line option
   that is like ``--trace`` but expands variable references in the output.
 
 Deprecated and Removed Features

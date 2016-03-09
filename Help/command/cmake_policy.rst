@@ -1,7 +1,7 @@
 cmake_policy
 ------------
 
-Manage CMake Policy settings.  See the :manual:`cmake-policies(7)`
+Manage CMake Policy settings.  See the :manual:`cmake3-policies(7)`
 manual for defined policies.
 
 As CMake evolves it is sometimes necessary to change existing behavior

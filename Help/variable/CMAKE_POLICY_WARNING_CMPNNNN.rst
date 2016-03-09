@@ -19,5 +19,5 @@ warn by default:
 This variable should not be set by a project in CMake code.  Project
 developers running CMake may set this variable in their cache to
 enable the warning (e.g. ``-DCMAKE_POLICY_WARNING_CMP<NNNN>=ON``).
-Alternatively, running :manual:`cmake(1)` with the ``--debug-output``,
+Alternatively, running :manual:`cmake3(1)` with the ``--debug-output``,
 ``--trace``, or ``--trace-expand`` option will also enable the warning.

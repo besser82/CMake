@@ -33,19 +33,19 @@ endif()
 include_directories(${CURSES_INCLUDE_PATH})
 
 
-add_executable(ccmake ${CURSES_SRCS} )
-target_link_libraries(ccmake CMakeLib)
+add_executable(ccmake3 ${CURSES_SRCS} )
+target_link_libraries(ccmake3 CMakeLib)
 if(CMAKE_USE_SYSTEM_FORM)
-  target_link_libraries(ccmake
+  target_link_libraries(ccmake3
     ${CURSES_FORM_LIBRARY}
     ${CURSES_LIBRARY}
   )
   if(CURSES_EXTRA_LIBRARY)
-    target_link_libraries(ccmake ${CURSES_EXTRA_LIBRARY})
+    target_link_libraries(ccmake3 ${CURSES_EXTRA_LIBRARY})
   endif()
 else()
-  target_link_libraries(ccmake cmForm)
+  target_link_libraries(ccmake3 cmForm)
 endif()
 
-CMake_OPTIONAL_COMPONENT(ccmake)
-install(TARGETS ccmake DESTINATION bin ${COMPONENT})
+CMake_OPTIONAL_COMPONENT(ccmake3)
+install(TARGETS ccmake3 DESTINATION bin ${COMPONENT})

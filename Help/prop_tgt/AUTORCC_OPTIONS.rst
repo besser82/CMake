@@ -17,5 +17,5 @@ created.
 The options set on the target may be overridden by :prop_sf:`AUTORCC_OPTIONS`
 set on the ``.qrc`` source file.
 
-See the :manual:`cmake-qt(7)` manual for more information on using CMake
+See the :manual:`cmake3-qt(7)` manual for more information on using CMake
 with Qt.

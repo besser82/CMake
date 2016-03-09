@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Language Reference
 
-cmake-language(7)
-*****************
+cmake3-language(7)
+******************
 
 .. only:: html
 
@@ -36,7 +36,7 @@ Scripts
 -------
 
 An individual ``<script>.cmake`` source file may be processed
-in *script mode* by using the :manual:`cmake(1)` command-line tool
+in *script mode* by using the :manual:`cmake3(1)` command-line tool
 with the ``-P`` option.  Script mode simply runs the commands in
 the given CMake Language source file and does not generate a
 build system.  It does not allow CMake commands that define build
@@ -48,7 +48,7 @@ Modules
 CMake Language code in either `Directories`_ or `Scripts`_ may
 use the :command:`include` command to load a ``<module>.cmake``
 source file in the scope of the including context.
-See the :manual:`cmake-modules(7)` manual page for documentation
+See the :manual:`cmake3-modules(7)` manual page for documentation
 of modules included with the CMake distribution.
 Project source trees may also provide their own modules and
 specify their location(s) in the :variable:`CMAKE_MODULE_PATH`
@@ -536,7 +536,7 @@ is found, or no binding is found, CMake then searches for a
 cache entry.  If a cache entry is found, its value is used.
 Otherwise, the variable reference evaluates to an empty string.
 
-The :manual:`cmake-variables(7)` manual documents many variables
+The :manual:`cmake3-variables(7)` manual documents many variables
 that are provided by CMake or have meaning to CMake when set
 by project code.
 

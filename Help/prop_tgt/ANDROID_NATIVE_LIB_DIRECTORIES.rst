@@ -12,5 +12,5 @@ This property is initialized by the value of the
 target is created.
 
 Contents of ``ANDROID_NATIVE_LIB_DIRECTORIES`` may use "generator expressions"
-with the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
+with the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
 manual for available expressions.

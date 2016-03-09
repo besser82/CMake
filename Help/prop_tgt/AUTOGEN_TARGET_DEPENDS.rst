@@ -13,5 +13,5 @@ The ``AUTOGEN_TARGET_DEPENDS`` target property can be set instead to a list of
 dependencies for the ``_automoc`` target.  The buildsystem will be generated to
 depend on its contents.
 
-See the :manual:`cmake-qt(7)` manual for more information on using CMake
+See the :manual:`cmake3-qt(7)` manual for more information on using CMake
 with Qt.

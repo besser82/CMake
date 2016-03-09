@@ -16,7 +16,7 @@ Sets the given ``<variable>`` to a command-line string of the form::
 
  <cmake> --build . [--config <config>] [--target <target>] [-- -i]
 
-where ``<cmake>`` is the location of the :manual:`cmake(1)` command-line
+where ``<cmake>`` is the location of the :manual:`cmake3(1)` command-line
 tool, and ``<config>`` and ``<target>`` are the values provided to the
 ``CONFIGURATION`` and ``TARGET`` options, if any.  The trailing ``-- -i``
 option is added for :ref:`Makefile Generators` if policy :policy:`CMP0061`

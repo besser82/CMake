@@ -18,8 +18,8 @@ The options set on the target may be overridden by :prop_sf:`AUTOUIC_OPTIONS`
 set on the ``.ui`` source file.
 
 This property may use "generator expressions" with the syntax ``$<...>``.
-See the :manual:`cmake-generator-expressions(7)` manual for available
+See the :manual:`cmake3-generator-expressions(7)` manual for available
 expressions.
 
-See the :manual:`cmake-qt(7)` manual for more information on using CMake
+See the :manual:`cmake3-qt(7)` manual for more information on using CMake
 with Qt.

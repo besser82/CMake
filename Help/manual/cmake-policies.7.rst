@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Policies Reference
 
-cmake-policies(7)
-*****************
+cmake3-policies(7)
+******************
 
 .. only:: html
 

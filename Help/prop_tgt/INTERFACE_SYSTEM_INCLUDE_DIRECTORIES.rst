@@ -23,6 +23,6 @@ same include directories as containing system headers.
 
 Contents of ``INTERFACE_SYSTEM_INCLUDE_DIRECTORIES`` may use "generator
 expressions" with the syntax ``$<...>``.  See the
-:manual:`cmake-generator-expressions(7)` manual for available expressions.
-See the :manual:`cmake-buildsystem(7)` manual for more on defining
+:manual:`cmake3-generator-expressions(7)` manual for available expressions.
+See the :manual:`cmake3-buildsystem(7)` manual for more on defining
 buildsystem properties.
