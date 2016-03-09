@@ -27,7 +27,7 @@ EXEC_CMAKE_COMMAND("--version \"${CMAKE_CURRENT_BINARY_DIR}/version.txt\"")
 add_executable(CommandLineTest CommandLineTest.cxx)
 
 get_filename_component(CMAKE_COMMAND_PATH "${CMAKE_COMMAND}" PATH)
-set(CTEST_COMMAND "${CMAKE_COMMAND_PATH}/ctest")
+set(CTEST_COMMAND "${CMAKE_COMMAND_PATH}/ctest3")
 macro(EXEC_CTEST_COMMAND CMAKE_ARGS)
   exec_program("${CTEST_COMMAND}" ARGS "${CMAKE_ARGS}" RETURN_VALUE RET)
   if(${RET})

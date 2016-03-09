@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=CMake
+Name=CMake3
 Comment=Cross-platform buildsystem
-Exec=cmake-gui %f
-Icon=CMakeSetup
+Exec=cmake3-gui %f
+Icon=CMake3Setup
 Terminal=false
 X-MultipleArgs=false
 Type=Application

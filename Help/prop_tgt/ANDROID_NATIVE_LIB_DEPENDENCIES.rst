@@ -10,5 +10,5 @@ when a target is created.
 
 Contents of ``ANDROID_NATIVE_LIB_DEPENDENCIES`` may use
 "generator expressions" with the syntax ``$<...>``. See the
-:manual:`cmake-generator-expressions(7)` manual for
+:manual:`cmake3-generator-expressions(7)` manual for
 available expressions.

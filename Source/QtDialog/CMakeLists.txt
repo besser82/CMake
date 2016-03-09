@@ -14,7 +14,7 @@ project(QtDialog)
 if(POLICY CMP0020)
   cmake_policy(SET CMP0020 NEW) # Drop when CMake >= 2.8.11 required
 endif()
-CMake_OPTIONAL_COMPONENT(cmake-gui)
+CMake_OPTIONAL_COMPONENT(cmake3-gui)
 find_package(Qt5Widgets QUIET)
 if (Qt5Widgets_FOUND)
   include_directories(${Qt5Widgets_INCLUDE_DIRS})
@@ -160,14 +160,14 @@ endif()
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_executable(cmake-gui WIN32 MACOSX_BUNDLE ${SRCS} ${MANIFEST_FILE})
-target_link_libraries(cmake-gui CMakeLib ${QT_QTMAIN_LIBRARY} ${CMake_QT_LIBRARIES})
+add_executable(cmake3-gui WIN32 MACOSX_BUNDLE ${SRCS} ${MANIFEST_FILE})
+target_link_libraries(cmake3-gui CMakeLib ${QT_QTMAIN_LIBRARY} ${CMake_QT_LIBRARIES})
 
 if(APPLE)
   file(STRINGS "${CMake_SOURCE_DIR}/Copyright.txt" copyright_line
     LIMIT_COUNT 1 REGEX "^Copyright 2000-20[0-9][0-9] Kitware")
 
-  set_target_properties(cmake-gui PROPERTIES
+  set_target_properties(cmake3-gui PROPERTIES
     OUTPUT_NAME CMake
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${CMAKE_BUNDLE_VERSION}"
@@ -177,15 +177,15 @@ if(APPLE)
 
   # Create a symlink in the build tree to provide a "cmake-gui" next
   # to the "cmake" executable that refers to the application bundle.
-  add_custom_command(TARGET cmake-gui POST_BUILD
+  add_custom_command(TARGET cmake3-gui POST_BUILD
     COMMAND ln -sf CMake.app/Contents/MacOS/CMake
-                   $<TARGET_FILE_DIR:cmake>/cmake-gui
+                   $<TARGET_FILE_DIR:cmake>/cmake3-gui
     )
 endif()
 set(CMAKE_INSTALL_DESTINATION_ARGS
   BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" ${COMPONENT})
 
-install(TARGETS cmake-gui
+install(TARGETS cmake3-gui
   RUNTIME DESTINATION bin ${COMPONENT}
   ${CMAKE_INSTALL_DESTINATION_ARGS})
 
@@ -195,22 +195,24 @@ if(UNIX AND NOT APPLE)
       FILES       "${CMAKE_CURRENT_SOURCE_DIR}/CMakeSetup${size}.png"
       DESTINATION "${CMAKE_XDGDATA_DIR}/icons/hicolor/${size}x${size}/apps"
       ${COMPONENT}
-      RENAME      "CMakeSetup.png")
+      RENAME      "CMake3Setup.png")
   endforeach ()
 
   # install a desktop file so CMake appears in the application start menu
   # with an icon
   install(FILES CMake.desktop
     DESTINATION "${CMAKE_XDGDATA_DIR}/applications"
-    ${COMPONENT})
+    ${COMPONENT}
+    RENAME      "CMake3.desktop")
   install(FILES cmakecache.xml
     DESTINATION "${CMAKE_XDGDATA_DIR}/mime/packages"
-    ${COMPONENT})
+    ${COMPONENT}
+    RENAME      "cmake3cache.xml")
 endif()
 
 if(APPLE)
   install(CODE "
-    execute_process(COMMAND ln -s \"../MacOS/CMake\" cmake-gui
+    execute_process(COMMAND ln -s \"../MacOS/CMake\" cmake3-gui
         WORKING_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/bin)
   " ${COMPONENT})
 endif()
@@ -218,7 +220,7 @@ endif()
 if(CMake_INSTALL_DEPENDENCIES AND (APPLE OR WIN32))
   # install rules for including 3rd party libs such as Qt
   # if a system Qt is used (e.g. installed in /usr/lib/), it will not be included in the installation
-  set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/bin/cmake-gui${CMAKE_EXECUTABLE_SUFFIX}")
+  set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/bin/cmake3-gui${CMAKE_EXECUTABLE_SUFFIX}")
   if(APPLE)
     set(fixup_exe "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/MacOS/CMake")
   endif()

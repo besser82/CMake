@@ -24,7 +24,7 @@
 static const char * cmDocumentationName[][2] =
 {
   {0,
-   "  ctest - Testing driver provided by CMake."},
+   "  ctest3 - Testing driver provided by CMake."},
   {0,0}
 };
 
@@ -32,7 +32,7 @@ static const char * cmDocumentationName[][2] =
 static const char * cmDocumentationUsage[][2] =
 {
   {0,
-   "  ctest [options]"},
+   "  ctest3 [options]"},
   {0,0}
 };
 
@@ -175,7 +175,7 @@ int main (int argc, char const* const* argv)
       ch->CreateCMake();
 
       doc.SetShowGenerators(false);
-      doc.SetName("ctest");
+      doc.SetName("ctest3");
       doc.SetSection("Name",cmDocumentationName);
       doc.SetSection("Usage",cmDocumentationUsage);
       doc.PrependSection("Options",cmDocumentationOptions);

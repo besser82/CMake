@@ -8,7 +8,7 @@ used.  For some compilers, this results in adding a flag such
 as ``-std=gnu++11`` instead of ``-std=c++11`` to the compile line.  This
 property is ``ON`` by default.
 
-See the :manual:`cmake-compile-features(7)` manual for information on
+See the :manual:`cmake3-compile-features(7)` manual for information on
 compile features and a list of supported compilers.
 
 This property is initialized by the value of

@@ -30,7 +30,7 @@
 static const char * cmDocumentationName[][2] =
 {
   {0,
-   "  cpack - Packaging driver provided by CMake."},
+   "  cpack3 - Packaging driver provided by CMake."},
   {0,0}
 };
 
@@ -38,7 +38,7 @@ static const char * cmDocumentationName[][2] =
 static const char * cmDocumentationUsage[][2] =
 {
   {0,
-   "  cpack -G <generator> [options]"},
+   "  cpack3 -G <generator> [options]"},
   {0,0}
 };
 
@@ -107,10 +107,10 @@ int main (int argc, char const* const* argv)
   cmSystemTools::FindCMakeResources(argv[0]);
   cmCPackLog log;
 
-  log.SetErrorPrefix("CPack Error: ");
-  log.SetWarningPrefix("CPack Warning: ");
-  log.SetOutputPrefix("CPack: ");
-  log.SetVerbosePrefix("CPack Verbose: ");
+  log.SetErrorPrefix("CPack3 Error: ");
+  log.SetWarningPrefix("CPack3 Warning: ");
+  log.SetOutputPrefix("CPack3: ");
+  log.SetVerbosePrefix("CPack3 Verbose: ");
 
   cmSystemTools::EnableMSVCDebugHook();
 
@@ -456,7 +456,7 @@ int main (int argc, char const* const* argv)
     {
     // Construct and print requested documentation.
 
-    doc.SetName("cpack");
+    doc.SetName("cpack3");
     doc.SetSection("Name",cmDocumentationName);
     doc.SetSection("Usage",cmDocumentationUsage);
     doc.PrependSection("Options",cmDocumentationOptions);

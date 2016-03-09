@@ -12,6 +12,6 @@ The value of this property is used by the generators to set the link
 libraries for the compiler.
 
 Contents of ``LINK_LIBRARIES`` may use "generator expressions" with the
-syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)` manual
-for available expressions.  See the :manual:`cmake-buildsystem(7)` manual
+syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)` manual
+for available expressions.  See the :manual:`cmake3-buildsystem(7)` manual
 for more on defining buildsystem properties.

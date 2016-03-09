@@ -21,9 +21,9 @@ if(CMAKE_DOC_TARBALL)
   endif()
   add_custom_command(
     OUTPUT ${dir}.stamp
-    COMMAND cmake -E remove_directory ${dir}
-    COMMAND cmake -E tar xf ${CMAKE_DOC_TARBALL}
-    COMMAND cmake -E touch ${dir}.stamp
+    COMMAND cmake3 -E remove_directory ${dir}
+    COMMAND cmake3 -E tar xf ${CMAKE_DOC_TARBALL}
+    COMMAND cmake3 -E touch ${dir}.stamp
     DEPENDS ${CMAKE_DOC_TARBALL}
     )
   add_custom_target(documentation ALL DEPENDS ${dir}.stamp)

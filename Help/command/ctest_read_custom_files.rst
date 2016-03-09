@@ -10,5 +10,5 @@ read CTestCustom files.
 Read all the CTestCustom.ctest or CTestCustom.cmake files from the
 given directory.
 
-By default, invoking :manual:`ctest(1)` without a script will read custom
+By default, invoking :manual:`ctest3(1)` without a script will read custom
 files from the binary directory.

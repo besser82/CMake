@@ -1,19 +1,19 @@
 .. cmake-manual-description: CTest Command-Line Reference
 
-ctest(1)
-********
+ctest3(1)
+*********
 
 Synopsis
 ========
 
 .. parsed-literal::
 
- ctest [<options>]
+ ctest3 [<options>]
 
 Description
 ===========
 
-The "ctest" executable is the CMake test driver program.
+The "ctest3" executable is the CMake test driver program.
 CMake-generated build trees created for projects that use the
 ENABLE_TESTING and ADD_TEST commands have testing support.  This
 program will run the tests and report results.
@@ -70,7 +70,7 @@ Options
  While running tests in parallel (e.g. with ``-j``), try not to start
  tests when they may cause the CPU load to pass above a given threshold.
 
- When ``ctest`` is run as a `Dashboard Client`_ this sets the
+ When ``ctest3`` is run as a `Dashboard Client`_ this sets the
  ``TestLoad`` option of the `CTest Test Step`_.
 
 ``-Q,--quiet``
@@ -161,7 +161,7 @@ Options
  This option tells ctest to load in a configuration script which sets
  a number of parameters such as the binary and source directories.
  Then ctest will do what is required to create and run a dashboard.
- This option basically sets up a dashboard and then runs ctest -D
+ This option basically sets up a dashboard and then runs ctest3 -D
  with the appropriate options.
 
 ``-SP <script>, --script-new-process <script>``
@@ -200,7 +200,7 @@ Options
  its previous run.  When this option is specified, ctest ignores all
  other options intended to modify the list of tests to run (-L, -R,
  -E, -LE, -I, etc).  In the event that CTest runs and no tests fail,
- subsequent calls to ctest with the --rerun-failed option will run
+ subsequent calls to ctest3 with the --rerun-failed option will run
  the set of tests that most recently failed (if any).
 
 ``--repeat-until-fail <n>``
@@ -470,11 +470,11 @@ Dashboard Client via CTest Command-Line
 ---------------------------------------
 
 CTest can perform testing on an already-generated build tree.
-Run the ``ctest`` command with the current working directory set
+Run the ``ctest3`` command with the current working directory set
 to the build tree and use one of these signatures::
 
-  ctest -D <mode>[<step>]
-  ctest -M <mode> [ -T <step> ]...
+  ctest3 -D <mode>[<step>]
+  ctest3 -M <mode> [ -T <step> ]...
 
 The ``<mode>`` must be one of the above `Dashboard Client Modes`_,
 and each ``<step>`` must be one of the above `Dashboard Client Steps`_.
@@ -501,14 +501,14 @@ as documented with the settings below.
 Dashboard Client via CTest Script
 ---------------------------------
 
-CTest can perform testing driven by a :manual:`cmake-language(7)`
+CTest can perform testing driven by a :manual:`cmake3-language(7)`
 script that creates and maintains the source and build tree as
-well as performing the testing steps.  Run the ``ctest`` command
+well as performing the testing steps.  Run the ``ctest3`` command
 with the current working directory set outside of any build tree
 and use one of these signatures::
 
-  ctest -S <script>
-  ctest -SP <script>
+  ctest3 -S <script>
+  ctest3 -SP <script>
 
 The ``<script>`` file must call :ref:`CTest Commands` commands
 to run testing steps explicitly as documented below.  The commands
@@ -746,7 +746,7 @@ Configuration settings include:
   When the build system to be launched allows build-time selection
   of the configuration (e.g. ``Debug``, ``Release``), this specifies
   the default configuration to be built when no ``-C`` option is
-  given to the ``ctest`` command.  The value will be substituted into
+  given to the ``ctest3`` command.  The value will be substituted into
   the value of ``MakeCommand`` to replace the literal string
   ``${CTEST_CONFIGURATION_TYPE}`` if it appears.
 

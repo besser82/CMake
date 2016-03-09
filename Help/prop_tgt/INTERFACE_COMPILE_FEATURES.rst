@@ -8,5 +8,5 @@ INTERFACE_COMPILE_FEATURES
 .. |PROPERTY_GENEX| replace:: ``$<TARGET_PROPERTY:foo,INTERFACE_COMPILE_FEATURES>``
 .. include:: INTERFACE_BUILD_PROPERTY.txt
 
-See the :manual:`cmake-compile-features(7)` manual for information on compile
+See the :manual:`cmake3-compile-features(7)` manual for information on compile
 features and a list of supported compilers.

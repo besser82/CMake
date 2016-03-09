@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Generator Expressions
 
-cmake-generator-expressions(7)
-******************************
+cmake3-generator-expressions(7)
+*******************************
 
 .. only:: html
 
@@ -87,7 +87,7 @@ Available logical expressions are:
   the link implementation of a target and if any dependency transitively
   increases the required :prop_tgt:`C_STANDARD` or :prop_tgt:`CXX_STANDARD`
   for the 'head' target, an error is reported.  See the
-  :manual:`cmake-compile-features(7)` manual for information on
+  :manual:`cmake3-compile-features(7)` manual for information on
   compile features and a list of supported compilers.
 ``$<COMPILE_LANGUAGE:lang>``
   ``1`` when the language used for compilation unit matches ``lang``,

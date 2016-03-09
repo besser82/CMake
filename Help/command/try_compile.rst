@@ -55,7 +55,7 @@ The options are:
 
 ``CMAKE_FLAGS <flags>...``
   Specify flags of the form ``-DVAR:TYPE=VALUE`` to be passed to
-  the ``cmake`` command-line used to drive the test build.
+  the ``cmake3`` command-line used to drive the test build.
   The above example shows how values for variables
   ``INCLUDE_DIRECTORIES``, ``LINK_DIRECTORIES``, and ``LINK_LIBRARIES``
   are used.
@@ -84,7 +84,7 @@ The options are:
 
 In this version all files in ``<bindir>/CMakeFiles/CMakeTmp`` will be
 cleaned automatically.  For debugging, ``--debug-trycompile`` can be
-passed to ``cmake`` to avoid this clean.  However, multiple sequential
+passed to ``cmake3`` to avoid this clean.  However, multiple sequential
 ``try_compile`` operations reuse this single output directory.  If you use
 ``--debug-trycompile``, you can only debug one ``try_compile`` call at a time.
 The recommended procedure is to protect all ``try_compile`` calls in your
