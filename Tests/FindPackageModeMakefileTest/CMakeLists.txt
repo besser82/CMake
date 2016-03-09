@@ -21,10 +21,10 @@ if(UNIX  AND  "${CMAKE_GENERATOR}" MATCHES "Makefile")
     # now set up the test:
     if (NOT CMAKE_VERSION VERSION_LESS 2.8.12)
       file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/cmakeExecutable.mk"
-        CONTENT "CMAKE = \"$<TARGET_FILE:cmake>\"\n"
+        CONTENT "CMAKE = \"$<TARGET_FILE:cmake3>\"\n"
       )
     else()
-      get_target_property(cmakeLocation cmake LOCATION)
+      get_target_property(cmakeLocation cmake3 LOCATION)
       file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/cmakeExecutable.mk"
         "CMAKE = \"${cmakeLocation}\"\n"
       )

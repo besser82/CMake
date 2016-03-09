@@ -13,4 +13,4 @@ This switch should be used during the initial CMake run.  Otherwise if
 the package has already been found in a previous CMake run, the
 variables which have been stored in the cache will still be there.  In
 that case it is recommended to remove the cache variables for this
-package from the cache using the cache editor or :manual:`cmake(1)` ``-U``
+package from the cache using the cache editor or :manual:`cmake3(1)` ``-U``

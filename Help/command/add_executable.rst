@@ -36,8 +36,8 @@ the created target.  See documentation of the :prop_tgt:`EXCLUDE_FROM_ALL`
 target property for details.
 
 Source arguments to ``add_executable`` may use "generator expressions" with
-the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
-manual for available expressions.  See the :manual:`cmake-buildsystem(7)`
+the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
+manual for available expressions.  See the :manual:`cmake3-buildsystem(7)`
 manual for more on defining buildsystem properties.
 
 

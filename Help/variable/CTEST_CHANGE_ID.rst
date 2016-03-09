@@ -2,7 +2,7 @@ CTEST_CHANGE_ID
 ---------------
 
 Specify the CTest ``ChangeId`` setting
-in a :manual:`ctest(1)` dashboard client script.
+in a :manual:`ctest3(1)` dashboard client script.
 
 This setting allows CTest to pass arbitrary information about this
 build up to CDash.  One use of this feature is to allow CDash to

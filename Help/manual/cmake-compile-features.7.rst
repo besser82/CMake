@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Compile Features Reference
 
-cmake-compile-features(7)
-*************************
+cmake3-compile-features(7)
+**************************
 
 .. only:: html
 
@@ -46,7 +46,7 @@ be compiled with compiler support for the
   target_compile_features(mylib PRIVATE cxx_constexpr)
 
 In processing the requirement for the ``cxx_constexpr`` feature,
-:manual:`cmake(1)` will ensure that the in-use C++ compiler is capable
+:manual:`cmake3(1)` will ensure that the in-use C++ compiler is capable
 of the feature, and will add any necessary flags such as ``-std=gnu++11``
 to the compile lines of C++ files in the ``mylib`` target.  A
 ``FATAL_ERROR`` is issued if the compiler is not capable of the
@@ -81,7 +81,7 @@ known feature), that may be specified with the ``PUBLIC`` or
   target_link_libraries(myexe mylib)
 
 Feature requirements are evaluated transitively by consuming the link
-implementation.  See :manual:`cmake-buildsystem(7)` for more on
+implementation.  See :manual:`cmake3-buildsystem(7)` for more on
 transitive behavior of build properties and usage requirements.
 
 Because the :prop_tgt:`CXX_EXTENSIONS` target property is ``ON`` by default,
@@ -267,10 +267,10 @@ abstract. What is needed is to use alternative include directories
 depending on the compiler capabilities.
 
 CMake provides a ``COMPILE_FEATURES``
-:manual:`generator expression <cmake-generator-expressions(7)>` to implement
+:manual:`generator expression <cmake3-generator-expressions(7)>` to implement
 such conditions.  This may be used with the build-property commands such as
 :command:`target_include_directories` and :command:`target_link_libraries`
-to set the appropriate :manual:`buildsystem <cmake-buildsystem(7)>`
+to set the appropriate :manual:`buildsystem <cmake3-buildsystem(7)>`
 properties:
 
 .. code-block:: cmake

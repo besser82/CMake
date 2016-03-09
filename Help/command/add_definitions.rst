@@ -23,5 +23,5 @@ backwards compatibility.  See documentation of the
 properties for details on adding preprocessor definitions to specific
 scopes and configurations.
 
-See the :manual:`cmake-buildsystem(7)` manual for more on defining
+See the :manual:`cmake3-buildsystem(7)` manual for more on defining
 buildsystem properties.

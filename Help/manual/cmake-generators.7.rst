@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Generators Reference
 
-cmake-generators(7)
-*******************
+cmake3-generators(7)
+********************
 
 .. only:: html
 
@@ -18,10 +18,10 @@ as a variant of some of the `Command-Line Build Tool Generators`_ to
 produce project files for an auxiliary IDE.
 
 CMake Generators are platform-specific so each may be available only
-on certain platforms.  The :manual:`cmake(1)` command-line tool ``--help``
+on certain platforms.  The :manual:`cmake3(1)` command-line tool ``--help``
 output lists available generators on the current platform.  Use its ``-G``
 option to specify the generator for a new build tree.
-The :manual:`cmake-gui(1)` offers interactive selection of a generator
+The :manual:`cmake3-gui(1)` offers interactive selection of a generator
 when creating a new build tree.
 
 CMake Generators
@@ -95,7 +95,7 @@ Other Generators
 Extra Generators
 ================
 
-Some of the `CMake Generators`_ listed in the :manual:`cmake(1)`
+Some of the `CMake Generators`_ listed in the :manual:`cmake3(1)`
 command-line tool ``--help`` output may have variants that specify
 an extra generator for an auxiliary IDE tool.  Such generator
 names have the form ``<extra-generator> - <main-generator>``.

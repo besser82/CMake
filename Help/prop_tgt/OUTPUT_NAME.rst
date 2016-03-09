@@ -8,7 +8,7 @@ library target.  If not set, the logical target name is used by
 default.
 
 Contents of ``OUTPUT_NAME`` and the variants listed below may use
-:manual:`generator expressions <cmake-generator-expressions(7)>`.
+:manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 See also the variants:
 

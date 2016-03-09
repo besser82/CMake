@@ -2002,20 +2002,20 @@ bool cmCTest::AddTestsForDashboardType(std::string &targ)
 void cmCTest::ErrorMessageUnknownDashDValue(std::string &val)
 {
   cmCTestLog(this, ERROR_MESSAGE,
-    "CTest -D called with incorrect option: " << val << std::endl);
+    "CTest3 -D called with incorrect option: " << val << std::endl);
 
   cmCTestLog(this, ERROR_MESSAGE,
     "Available options are:" << std::endl
-    << "  ctest -D Continuous" << std::endl
-    << "  ctest -D Continuous(Start|Update|Configure|Build)" << std::endl
-    << "  ctest -D Continuous(Test|Coverage|MemCheck|Submit)" << std::endl
-    << "  ctest -D Experimental" << std::endl
-    << "  ctest -D Experimental(Start|Update|Configure|Build)" << std::endl
-    << "  ctest -D Experimental(Test|Coverage|MemCheck|Submit)" << std::endl
-    << "  ctest -D Nightly" << std::endl
-    << "  ctest -D Nightly(Start|Update|Configure|Build)" << std::endl
-    << "  ctest -D Nightly(Test|Coverage|MemCheck|Submit)" << std::endl
-    << "  ctest -D NightlyMemoryCheck" << std::endl);
+    << "  ctest3 -D Continuous" << std::endl
+    << "  ctest3 -D Continuous(Start|Update|Configure|Build)" << std::endl
+    << "  ctest3 -D Continuous(Test|Coverage|MemCheck|Submit)" << std::endl
+    << "  ctest3 -D Experimental" << std::endl
+    << "  ctest3 -D Experimental(Start|Update|Configure|Build)" << std::endl
+    << "  ctest3 -D Experimental(Test|Coverage|MemCheck|Submit)" << std::endl
+    << "  ctest3 -D Nightly" << std::endl
+    << "  ctest3 -D Nightly(Start|Update|Configure|Build)" << std::endl
+    << "  ctest3 -D Nightly(Test|Coverage|MemCheck|Submit)" << std::endl
+    << "  ctest3 -D NightlyMemoryCheck" << std::endl);
 }
 
 
@@ -2381,7 +2381,7 @@ bool cmCTest::AddVariableDefinition(const std::string &arg)
 // the main entry point of ctest, called from main
 int cmCTest::Run(std::vector<std::string> &args, std::string* output)
 {
-  const char* ctestExec = "ctest";
+  const char* ctestExec = "ctest3";
   bool cmakeAndTest = false;
   bool executeTests = true;
   bool SRArgumentSpecified = false;

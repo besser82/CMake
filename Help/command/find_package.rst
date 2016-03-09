@@ -269,7 +269,7 @@ enabled.
    This can be skipped if ``NO_CMAKE_PACKAGE_REGISTRY`` is passed or by
    setting the :variable:`CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY`
    to ``TRUE``.
-   See the :manual:`cmake-packages(7)` manual for details on the user
+   See the :manual:`cmake3-packages(7)` manual for details on the user
    package registry.
 
 6. Search cmake variables defined in the Platform files for the
@@ -284,7 +284,7 @@ enabled.
    This can be skipped if ``NO_CMAKE_SYSTEM_PACKAGE_REGISTRY`` is passed
    or by setting the
    :variable:`CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY` to ``TRUE``.
-   See the :manual:`cmake-packages(7)` manual for details on the system
+   See the :manual:`cmake3-packages(7)` manual for details on the system
    package registry.
 
 8. Search paths specified by the ``PATHS`` option.  These are typically

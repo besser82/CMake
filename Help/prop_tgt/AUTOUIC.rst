@@ -20,5 +20,5 @@ Additional command line options for ``uic`` can be set via the
 The global property :prop_gbl:`AUTOGEN_TARGETS_FOLDER` can be used to group the
 autouic targets together in an IDE, e.g. in MSVS.
 
-See the :manual:`cmake-qt(7)` manual for more information on using CMake
+See the :manual:`cmake3-qt(7)` manual for more information on using CMake
 with Qt.

@@ -7,5 +7,5 @@ This variable is used to initialize the :prop_tgt:`C_STANDARD_REQUIRED`
 property on all targets.  See that target property for additional
 information.
 
-See the :manual:`cmake-compile-features(7)` manual for information on
+See the :manual:`cmake3-compile-features(7)` manual for information on
 compile features and a list of supported compilers.

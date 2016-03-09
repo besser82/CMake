@@ -11,6 +11,6 @@ to set attributes on all targets in a directory tree.
 
 Contents of ``XCODE_ATTRIBUTE_<an-attribute>`` may use
 "generator expressions" with the syntax ``$<...>``.  See the
-:manual:`cmake-generator-expressions(7)` manual for available
-expressions.  See the :manual:`cmake-buildsystem(7)` manual
+:manual:`cmake3-generator-expressions(7)` manual for available
+expressions.  See the :manual:`cmake3-buildsystem(7)` manual
 for more on defining buildsystem properties.

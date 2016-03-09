@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Packages Reference
 
-cmake-packages(7)
-*****************
+cmake3-packages(7)
+******************
 
 .. only:: html
 
@@ -84,7 +84,7 @@ Config-file Packages
 A config-file package is a set of files provided by upstreams for downstreams
 to use. CMake searches in a number of locations for package configuration files, as
 described in the :command:`find_package` documentation.  The most simple way for
-a CMake user to tell :manual:`cmake(1)` to search in a non-standard prefix for
+a CMake user to tell :manual:`cmake3(1)` to search in a non-standard prefix for
 a package is to set the ``CMAKE_PREFIX_PATH`` cache variable.
 
 Config-file packages are provided by upstream vendors as part of development
@@ -115,7 +115,7 @@ the author of the Find-module.  Similarly there is no ``<Package>_DIR`` variable
 but each of the artifacts such as library locations and header file locations
 provide a separate cache variable.
 
-See the :manual:`cmake-developer(7)` manual for more information about creating
+See the :manual:`cmake3-developer(7)` manual for more information about creating
 Find-module files.
 
 Package Layout
@@ -368,7 +368,7 @@ generated :prop_tgt:`IMPORTED` targets.  In the above case,
 ``ClimbingStats_MAJOR_VERSION`` is defined as a string which must be
 compatible among the dependencies of any depender.  By setting this custom
 defined user property in this version and in the next version of
-``ClimbingStats``, :manual:`cmake(1)` will issue a diagnostic if there is an
+``ClimbingStats``, :manual:`cmake3(1)` will issue a diagnostic if there is an
 attempt to use version 3 together with version 4.  Packages can choose to
 employ such a pattern if different major versions of the package are designed
 to be incompatible.
@@ -498,7 +498,7 @@ directories should be specified as relative paths which are relative to the
   )
 
 The ``$<INSTALL_PREFIX>``
-:manual:`generator expression <cmake-generator-expressions(7)>` may be used as
+:manual:`generator expression <cmake3-generator-expressions(7)>` may be used as
 a placeholder for the install prefix without resulting in a non-relocatable
 package.  This is necessary if complex generator expressions are used:
 
@@ -547,7 +547,7 @@ appropriate :command:`find_package` commands (via the ``find_dependency``
 macro described above) to find the dependencies and populate the
 imported targets with appropriate paths on their own machine.
 
-Unfortunately many :manual:`modules <cmake-modules(7)>` shipped with
+Unfortunately many :manual:`modules <cmake3-modules(7)>` shipped with
 CMake do not yet provide :ref:`IMPORTED targets <Imported Targets>`
 because their development pre-dated this approach.  This may improve
 incrementally over time.  Workarounds to create relocatable packages

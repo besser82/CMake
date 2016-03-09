@@ -1,20 +1,20 @@
 .. cmake-manual-description: CMake GUI Command-Line Reference
 
-cmake-gui(1)
-************
+cmake3-gui(1)
+*************
 
 Synopsis
 ========
 
 .. parsed-literal::
 
- cmake-gui [<options>]
- cmake-gui [<options>] (<path-to-source> | <path-to-existing-build>)
+ cmake3-gui [<options>]
+ cmake3-gui [<options>] (<path-to-source> | <path-to-existing-build>)
 
 Description
 ===========
 
-The "cmake-gui" executable is the CMake GUI.  Project configuration
+The "cmake3-gui" executable is the CMake GUI.  Project configuration
 settings may be specified interactively.  Brief instructions are
 provided at the bottom of the window when the program is running.
 

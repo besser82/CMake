@@ -2,7 +2,7 @@ set
 ---
 
 Set a normal, cache, or environment variable to a given value.
-See the :ref:`cmake-language(7) variables <CMake Language Variables>`
+See the :ref:`cmake3-language(7) variables <CMake Language Variables>`
 documentation for the scopes and interaction of normal variables
 and cache entries.
 
@@ -42,26 +42,26 @@ overwrite existing entries.
 The ``<type>`` must be specified as one of:
 
 ``BOOL``
-  Boolean ``ON/OFF`` value.  :manual:`cmake-gui(1)` offers a checkbox.
+  Boolean ``ON/OFF`` value.  :manual:`cmake3-gui(1)` offers a checkbox.
 
 ``FILEPATH``
-  Path to a file on disk.  :manual:`cmake-gui(1)` offers a file dialog.
+  Path to a file on disk.  :manual:`cmake3-gui(1)` offers a file dialog.
 
 ``PATH``
-  Path to a directory on disk.  :manual:`cmake-gui(1)` offers a file dialog.
+  Path to a directory on disk.  :manual:`cmake3-gui(1)` offers a file dialog.
 
 ``STRING``
-  A line of text.  :manual:`cmake-gui(1)` offers a text field or a
+  A line of text.  :manual:`cmake3-gui(1)` offers a text field or a
   drop-down selection if the :prop_cache:`STRINGS` cache entry
   property is set.
 
 ``INTERNAL``
-  A line of text.  :manual:`cmake-gui(1)` does not show internal entries.
+  A line of text.  :manual:`cmake3-gui(1)` does not show internal entries.
   They may be used to store variables persistently across runs.
   Use of this type implies ``FORCE``.
 
 The ``<docstring>`` must be specified as a line of text providing
-a quick summary of the option for presentation to :manual:`cmake-gui(1)`
+a quick summary of the option for presentation to :manual:`cmake3-gui(1)`
 users.
 
 If the cache entry does not exist prior to the call or the ``FORCE``
@@ -71,7 +71,7 @@ be removed to expose the newly cached value to any immediately
 following evaluation.
 
 It is possible for the cache entry to exist prior to the call but
-have no type set if it was created on the :manual:`cmake(1)` command
+have no type set if it was created on the :manual:`cmake3(1)` command
 line by a user through the ``-D<var>=<value>`` option without
 specifying a type.  In this case the ``set`` command will add the
 type.  Furthermore, if the ``<type>`` is ``PATH`` or ``FILEPATH``
