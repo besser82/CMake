@@ -15,8 +15,8 @@
 /* Use the libarchive configured for CMake.  */
 #include "cmThirdParty.h"
 #ifdef CMAKE_USE_SYSTEM_LIBARCHIVE
-# include <archive.h>
-# include <archive_entry.h>
+# include <archive3.h>
+# include <archive_entry3.h>
 #else
 # include <cmlibarchive/libarchive/archive.h>
 # include <cmlibarchive/libarchive/archive_entry.h>
