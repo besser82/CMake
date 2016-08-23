@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Language Command Reference
 
-cmake-commands(7)
-*****************
+cmake3-commands(7)
+******************
 
 .. only:: html
 

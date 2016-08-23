@@ -1,6 +1,6 @@
-# bash completion for cmake(1)                             -*- shell-script -*-
+# bash completion for cmake3(1)                             -*- shell-script -*-
 
-_cmake()
+_cmake3()
 {
     local cur prev words cword split=false
     if type -t _init_completion >/dev/null; then
@@ -42,7 +42,7 @@ _cmake()
                     type="${cur#*:}"
                     type="${type%%=*}"
                 else # get type from cache if it's not set explicitly
-                    type=$( cmake -LA -N 2>/dev/null | grep "$var:" \
+                    type=$( cmake3 -LA -N 2>/dev/null | grep "$var:" \
                         2>/dev/null )
                     type="${type#*:}"
                     type="${type%%=*}"
@@ -76,14 +76,14 @@ _cmake()
                 compopt -o nospace
             else
             # complete variable names
-                COMPREPLY=( $( compgen -W '$( cmake -LA -N | tail -n +2 |
+                COMPREPLY=( $( compgen -W '$( cmake3 -LA -N | tail -n +2 |
                     cut -f1 -d: )' -P "$prefix" -- "$cur" ) )
                 compopt -o nospace
             fi
             return
             ;;
         -U)
-            COMPREPLY=( $( compgen -W '$( cmake -LA -N | tail -n +2 |
+            COMPREPLY=( $( compgen -W '$( cmake3 -LA -N | tail -n +2 |
                 cut -f1 -d: )' -P "$prefix" -- "$cur" ) )
             return
             ;;
@@ -101,7 +101,7 @@ _cmake()
             return
             ;;
         -E)
-            COMPREPLY=( $( compgen -W "$( cmake -E help |& sed -n \
+            COMPREPLY=( $( compgen -W "$( cmake3 -E help |& sed -n \
                 '/^  /{s|^  \([^ ]\{1,\}\) .*$|\1|;p}' 2>/dev/null )" \
                 -- "$cur" ) )
             return
@@ -110,40 +110,40 @@ _cmake()
             local IFS=$'\n'
             local quoted
             printf -v quoted %q "$cur"
-            COMPREPLY=( $( compgen -W '$( cmake --help 2>/dev/null | sed -n \
+            COMPREPLY=( $( compgen -W '$( cmake3 --help 2>/dev/null | sed -n \
                 -e "1,/^Generators/d" \
                 -e "/^  *[^ =]/{s|^ *\([^=]*[^ =]\).*$|\1|;s| |\\\\ |g;p}" \
                 2>/dev/null )' -- "$quoted" ) )
             return
             ;;
         --help-command)
-            COMPREPLY=( $( compgen -W '$( cmake --help-command-list 2>/dev/null|
-                grep -v "^cmake version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-command-list 2>/dev/null|
+                grep -v "^cmake3 version " )' -- "$cur" ) )
             return
             ;;
         --help-manual)
-            COMPREPLY=( $( compgen -W '$( cmake --help-manual-list 2>/dev/null|
-                grep -v "^cmake version " | sed -e "s/([0-9])$//" )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-manual-list 2>/dev/null|
+                grep -v "^cmake3 version " | sed -e "s/([0-9])$//" )' -- "$cur" ) )
             return
             ;;
         --help-module)
-            COMPREPLY=( $( compgen -W '$( cmake --help-module-list 2>/dev/null|
-                grep -v "^cmake version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-module-list 2>/dev/null|
+                grep -v "^cmake3 version " )' -- "$cur" ) )
             return
             ;;
          --help-policy)
-            COMPREPLY=( $( compgen -W '$( cmake --help-policy-list 2>/dev/null |
-                grep -v "^cmake version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-policy-list 2>/dev/null |
+                grep -v "^cmake3 version " )' -- "$cur" ) )
             return
             ;;
          --help-property)
-            COMPREPLY=( $( compgen -W '$( cmake --help-property-list \
-                2>/dev/null | grep -v "^cmake version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-property-list \
+                2>/dev/null | grep -v "^cmake3 version " )' -- "$cur" ) )
             return
             ;;
          --help-variable)
-            COMPREPLY=( $( compgen -W '$( cmake --help-variable-list \
-                2>/dev/null | grep -v "^cmake version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( cmake3 --help-variable-list \
+                2>/dev/null | grep -v "^cmake3 version " )' -- "$cur" ) )
             return
             ;;
     esac
@@ -158,6 +158,6 @@ _cmake()
 
     _filedir
 } &&
-complete -F _cmake cmake
+complete -F _cmake3 cmake3
 
 # ex: ts=4 sw=4 et filetype=sh

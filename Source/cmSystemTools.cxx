@@ -1933,7 +1933,7 @@ void cmSystemTools::FindCMakeResources(const char* argv0)
     // Look for ../bin (install tree) and then fall back to
     // ../../../bin (build tree).
     exe_dir = cmSystemTools::GetFilenamePath(exe_dir);
-    if (cmSystemTools::FileExists((exe_dir + "/bin/cmake").c_str())) {
+    if (cmSystemTools::FileExists((exe_dir + "/bin/cmake3").c_str())) {
       exe_dir += "/bin";
     } else {
       exe_dir = cmSystemTools::GetFilenamePath(exe_dir);
@@ -1952,7 +1952,7 @@ void cmSystemTools::FindCMakeResources(const char* argv0)
   }
 #endif
   cmSystemToolsCMakeCommand = exe_dir;
-  cmSystemToolsCMakeCommand += "/cmake";
+  cmSystemToolsCMakeCommand += "/cmake3";
   cmSystemToolsCMakeCommand += cmSystemTools::GetExecutableExtension();
 #ifndef CMAKE_BUILD_WITH_CMAKE
   // The bootstrap cmake does not provide the other tools,
@@ -1960,25 +1960,25 @@ void cmSystemTools::FindCMakeResources(const char* argv0)
   exe_dir = CMAKE_BOOTSTRAP_BINARY_DIR "/bin";
 #endif
   cmSystemToolsCTestCommand = exe_dir;
-  cmSystemToolsCTestCommand += "/ctest";
+  cmSystemToolsCTestCommand += "/ctest3";
   cmSystemToolsCTestCommand += cmSystemTools::GetExecutableExtension();
   cmSystemToolsCPackCommand = exe_dir;
-  cmSystemToolsCPackCommand += "/cpack";
+  cmSystemToolsCPackCommand += "/cpack3";
   cmSystemToolsCPackCommand += cmSystemTools::GetExecutableExtension();
   cmSystemToolsCMakeGUICommand = exe_dir;
-  cmSystemToolsCMakeGUICommand += "/cmake-gui";
+  cmSystemToolsCMakeGUICommand += "/cmake3-gui";
   cmSystemToolsCMakeGUICommand += cmSystemTools::GetExecutableExtension();
   if (!cmSystemTools::FileExists(cmSystemToolsCMakeGUICommand.c_str())) {
     cmSystemToolsCMakeGUICommand = "";
   }
   cmSystemToolsCMakeCursesCommand = exe_dir;
-  cmSystemToolsCMakeCursesCommand += "/ccmake";
+  cmSystemToolsCMakeCursesCommand += "/ccmake3";
   cmSystemToolsCMakeCursesCommand += cmSystemTools::GetExecutableExtension();
   if (!cmSystemTools::FileExists(cmSystemToolsCMakeCursesCommand.c_str())) {
     cmSystemToolsCMakeCursesCommand = "";
   }
   cmSystemToolsCMClDepsCommand = exe_dir;
-  cmSystemToolsCMClDepsCommand += "/cmcldeps";
+  cmSystemToolsCMClDepsCommand += "/cmcldeps3";
   cmSystemToolsCMClDepsCommand += cmSystemTools::GetExecutableExtension();
   if (!cmSystemTools::FileExists(cmSystemToolsCMClDepsCommand.c_str())) {
     cmSystemToolsCMClDepsCommand = "";

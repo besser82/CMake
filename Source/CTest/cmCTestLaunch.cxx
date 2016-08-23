@@ -605,7 +605,7 @@ bool cmCTestLaunch::MatchesFilterPrefix(std::string const& line) const
 int cmCTestLaunch::Main(int argc, const char* const argv[])
 {
   if (argc == 2) {
-    std::cerr << "ctest --launch: this mode is for internal CTest use only"
+    std::cerr << "ctest3 --launch: this mode is for internal CTest use only"
               << std::endl;
     return 1;
   }

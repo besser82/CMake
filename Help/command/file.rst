@@ -268,8 +268,8 @@ the ``<format>`` and ``UTC`` options.
        [CONDITION expression])
 
 Generate an output file for each build configuration supported by the current
-:manual:`CMake Generator <cmake-generators(7)>`.  Evaluate
-:manual:`generator expressions <cmake-generator-expressions(7)>`
+:manual:`CMake Generator <cmake3-generators(7)>`.  Evaluate
+:manual:`generator expressions <cmake3-generator-expressions(7)>`
 from the input content to produce the output content.  The options are:
 
 ``CONDITION <condition>``

@@ -2229,7 +2229,7 @@ void cmGlobalGenerator::CreateDefaultGlobalTargets(cmTargets* targets)
       // We are building CMake itself.  We cannot use the original
       // executable to install over itself.  The generator will
       // automatically convert this name to the build-time location.
-      cmd = "cmake";
+      cmd = "cmake3";
     }
     singleLine.push_back(cmd);
     if (cmakeCfgIntDir && *cmakeCfgIntDir && cmakeCfgIntDir[0] != '.') {

@@ -5,4 +5,7 @@
 # add symlinks to the files in appropriate places
 #  /etc/bash_completion.d/
 #  DATADIR/completions (may be /usr/share/<package>/completions
-install(FILES cmake cpack ctest DESTINATION ${CMAKE_DATA_DIR}/completions)
+foreach(_file cmake cpack ctest)
+  set(new_name "${_file}3")
+  install(FILES "${_file}" DESTINATION ${CMAKE_DATA_DIR}/completions RENAME ${new_name})
+endforeach(_file cmake cpack ctest)

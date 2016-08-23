@@ -1,14 +1,14 @@
 .. cmake-manual-description: CPack Command-Line Reference
 
-cpack(1)
-********
+cpack3(1)
+*********
 
 Synopsis
 ========
 
 .. parsed-literal::
 
- cpack -G <generator> [<options>]
+ cpack3 -G <generator> [<options>]
 
 Description
 ===========

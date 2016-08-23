@@ -16,8 +16,8 @@ by the native build tool.
 .. include:: /include/COMPILE_DEFINITIONS_DISCLAIMER.txt
 
 Contents of ``COMPILE_DEFINITIONS`` may use "generator expressions" with the
-syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)` manual
-for available expressions.  See the :manual:`cmake-buildsystem(7)` manual
+syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)` manual
+for available expressions.  See the :manual:`cmake3-buildsystem(7)` manual
 for more on defining buildsystem properties.
 
 The corresponding :prop_tgt:`COMPILE_DEFINITIONS_<CONFIG>` property may

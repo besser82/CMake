@@ -1,6 +1,6 @@
-# bash completion for ctest(1)                             -*- shell-script -*-
+# bash completion for ctest3(1)                             -*- shell-script -*-
 
-_ctest()
+_ctest3()
 {
     local cur prev words cword
     if type -t _init_completion >/dev/null; then
@@ -27,7 +27,7 @@ _ctest()
             return
             ;;
         -L|--label-regex|-LE|--label-exclude)
-            COMPREPLY=( $( compgen -W '$( ctest --print-labels 2>/dev/null |
+            COMPREPLY=( $( compgen -W '$( ctest3 --print-labels 2>/dev/null |
                 grep "^  " 2>/dev/null | cut -d" " -f 3 )' -- "$cur" ) )
             return
             ;;
@@ -36,7 +36,7 @@ _ctest()
             return
             ;;
         -R|--tests-regex|-E|--exclude-regex)
-            COMPREPLY=( $( compgen -W '$( ctest -N 2>/dev/null |
+            COMPREPLY=( $( compgen -W '$( ctest3 -N 2>/dev/null |
                 grep "^  Test" 2>/dev/null | cut -d: -f 2 )' -- "$cur" ) )
             return
             ;;
@@ -65,7 +65,7 @@ _ctest()
             return
             ;;
         -S|--script|-SP|--script-new-process)
-            _filedir '@(cmake|ctest)'
+            _filedir '@(cmake3|ctest3)'
             return
             ;;
         --interactive-debug-mode)
@@ -74,8 +74,8 @@ _ctest()
             ;;
 
         --help-command)
-            COMPREPLY=( $( compgen -W '$( ctest --help-command-list 2>/dev/null|
-                grep -v "^ctest version " )' -- "$cur" ) )
+            COMPREPLY=( $( compgen -W '$( ctest3 --help-command-list 2>/dev/null|
+                grep -v "^ctest3 version " )' -- "$cur" ) )
             return
             ;;
         --help-manual)
@@ -113,6 +113,6 @@ _ctest()
 
     _filedir
 } &&
-complete -F _ctest ctest
+complete -F _ctest3 ctest3
 
 # ex: ts=4 sw=4 et filetype=sh

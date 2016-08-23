@@ -118,7 +118,7 @@ Modules
   like ``<BINARY_DIR>`` in the ``BYPRODUCTS`` of each step.
 
 * The :module:`ExternalProject` module APIs learned to support
-  :manual:`generator expressions <cmake-generator-expressions(7)>`
+  :manual:`generator expressions <cmake3-generator-expressions(7)>`
   when using ``LOG_*`` options and in CMake initial cache options.
 
 * The :module:`FindBoost` module now tracks the directories containing
@@ -153,13 +153,13 @@ Generator Expressions
   allow specification of compile options for target files based on the
   :prop_sf:`LANGUAGE` of each source file.  Due to limitations of the
   underlying native build tools, this feature has varying support across
-  generators.  See the :manual:`cmake-generator-expressions(7)` manual
+  generators.  See the :manual:`cmake3-generator-expressions(7)` manual
   for details.
 
 CTest
 -----
 
-* The :manual:`ctest(1)` tool learned a new ``--repeat-until-fail <n>``
+* The :manual:`ctest3(1)` tool learned a new ``--repeat-until-fail <n>``
   option to help find sporadic test failures.
 
 * The :module:`CTestCoverageCollectGCOV` module learned to support
@@ -169,7 +169,7 @@ CTest
 CPack
 -----
 
-* The :manual:`cpack(1)` ``IFW`` generator and the :module:`CPackIFW`
+* The :manual:`cpack3(1)` ``IFW`` generator and the :module:`CPackIFW`
   module learned to support Qt Framework Installer 2.0 tools.
 
 * The :module:`CPackDeb` module learned a new
@@ -202,11 +202,11 @@ CPack
 Other
 -----
 
-* The :manual:`Compile Features <cmake-compile-features(7)>` functionality
+* The :manual:`Compile Features <cmake3-compile-features(7)>` functionality
   is now aware of features supported by GNU compilers on Windows, versions
   4.4 through 5.0.
 
-* The :manual:`cmake(1)` ``-E tar`` command learned a new
+* The :manual:`cmake3(1)` ``-E tar`` command learned a new
   ``--format<format>`` option to specify the archive format to
   be written.
 
@@ -217,13 +217,13 @@ Other
 Deprecated and Removed Features
 ===============================
 
-* On OS X the :manual:`cmake-gui(1)` no longer has the
+* On OS X the :manual:`cmake3-gui(1)` no longer has the
   ``Install For Command Line Use`` menu item.  Instead there
   is a ``How to Install For Command Line Use`` menu item
   that shows an informational dialog box explaining how to
   make the command line tools available.  For example::
 
-    /Applications/CMake.app/Contents/bin/cmake-gui --install
+    /Applications/CMake.app/Contents/bin/cmake3-gui --install
 
 * The :command:`ctest_build` and :command:`build_command` commands
   no longer tell ``make`` tools to ignore errors with the ``-i`` option.
@@ -244,7 +244,7 @@ Deprecated and Removed Features
   and will be removed in a future version of CMake.
 
 * The :command:`find_package` command no longer considers project
-  build trees recently configured in a :manual:`cmake-gui(1)`.
+  build trees recently configured in a :manual:`cmake3-gui(1)`.
   This was previously done only on Windows and is now never done.
   The ``NO_CMAKE_BUILDS_PATH`` option is now ignored if given
   and effectively always on.

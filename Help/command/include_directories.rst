@@ -30,6 +30,6 @@ skipping warnings, or these fixed-install system files not being
 considered in dependency calculations - see compiler docs.
 
 Arguments to ``include_directories`` may use "generator expressions" with
-the syntax "$<...>".  See the :manual:`cmake-generator-expressions(7)`
-manual for available expressions.  See the :manual:`cmake-buildsystem(7)`
+the syntax "$<...>".  See the :manual:`cmake3-generator-expressions(7)`
+manual for available expressions.  See the :manual:`cmake3-buildsystem(7)`
 manual for more on defining buildsystem properties.

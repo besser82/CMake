@@ -13,27 +13,27 @@ New Features
 GUI
 ---
 
-* The :manual:`cmake-gui(1)` gained options to control warnings about
+* The :manual:`cmake3-gui(1)` gained options to control warnings about
   deprecated functionality.
 
-* The :manual:`cmake-gui(1)` learned an option to set the toolset
+* The :manual:`cmake3-gui(1)` learned an option to set the toolset
   to be used with VS IDE and Xcode generators, much like the
-  existing ``-T`` option to :manual:`cmake(1)`.
+  existing ``-T`` option to :manual:`cmake3(1)`.
 
-* The :manual:`cmake-gui(1)` gained a Regular Expression Explorer which
+* The :manual:`cmake3-gui(1)` gained a Regular Expression Explorer which
   may be used to create and evaluate regular expressions in real-time.
   The explorer window is available via the ``Tools`` menu.
 
 Command-Line
 ------------
 
-* The ``-Wdev`` and ``-Wno-dev`` :manual:`cmake(1)` options now also enable
+* The ``-Wdev`` and ``-Wno-dev`` :manual:`cmake3(1)` options now also enable
   and suppress the deprecated warnings output by default.
 
 * The suppression of developer warnings as errors can now be controlled with
-  the new ``-Werror=dev`` and ``-Wno-error=dev`` :manual:`cmake(1)` options.
+  the new ``-Werror=dev`` and ``-Wno-error=dev`` :manual:`cmake3(1)` options.
 
-* The :manual:`cmake(1)` ``-E`` command-line tools ``copy``,
+* The :manual:`cmake3(1)` ``-E`` command-line tools ``copy``,
   ``copy_if_different``, ``copy_directory``, and ``make_directory``
   learned to support multiple input files or directories.
 
@@ -45,18 +45,18 @@ Commands
   for compatibility.
 
 * The :command:`install(DIRECTORY)` command learned to support
-  :manual:`generator expressions <cmake-generator-expressions(7)>`
+  :manual:`generator expressions <cmake3-generator-expressions(7)>`
   in the list of directories.
 
 Variables
 ---------
 
 * The :variable:`CMAKE_ERROR_DEPRECATED` variable can now be set using the
-  ``-Werror=deprecated`` and ``-Wno-error=deprecated`` :manual:`cmake(1)`
+  ``-Werror=deprecated`` and ``-Wno-error=deprecated`` :manual:`cmake3(1)`
   options.
 
 * The :variable:`CMAKE_WARN_DEPRECATED` variable can now be set using the
-  ``-Wdeprecated`` and ``-Wno-deprecated`` :manual:`cmake(1)` options.
+  ``-Wdeprecated`` and ``-Wno-deprecated`` :manual:`cmake3(1)` options.
 
 Properties
 ----------
@@ -109,7 +109,7 @@ Platforms
   :ref:`Cross Compiling for the Cray Linux Environment <Cray Cross-Compile>`
   for usage details.
 
-* The :manual:`Compile Features <cmake-compile-features(7)>` functionality
+* The :manual:`Compile Features <cmake3-compile-features(7)>` functionality
   is now aware of features supported by Clang compilers on Windows (MinGW).
 
 * When building for embedded Apple platforms like iOS CMake learned to build and
@@ -159,7 +159,7 @@ Other
 Deprecated and Removed Features
 ===============================
 
-* The :manual:`cmake(1)` ``-E time`` command now properly passes arguments
+* The :manual:`cmake3(1)` ``-E time`` command now properly passes arguments
   with spaces or special characters through to the child process.  This
   may break scripts that worked around the bug with their own extra
   quoting or escaping.

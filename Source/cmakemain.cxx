@@ -29,13 +29,13 @@
 
 #ifdef CMAKE_BUILD_WITH_CMAKE
 static const char* cmDocumentationName[][2] = {
-  { 0, "  cmake - Cross-Platform Makefile Generator." },
+  { 0, "  cmake3 - Cross-Platform Makefile Generator." },
   { 0, 0 }
 };
 
 static const char* cmDocumentationUsage[][2] = {
-  { 0, "  cmake [options] <path-to-source>\n"
-       "  cmake [options] <path-to-existing-build>" },
+  { 0, "  cmake3 [options] <path-to-source>\n"
+       "  cmake3 [options] <path-to-existing-build>" },
   { 0, "Specify a source directory to (re-)generate a build system for "
        "it in the current working directory.  Specify an existing build "
        "directory to re-generate its build system." },
@@ -43,7 +43,7 @@ static const char* cmDocumentationUsage[][2] = {
 };
 
 static const char* cmDocumentationUsageNote[][2] = {
-  { 0, "Run 'cmake --help' for more information." },
+  { 0, "Run 'cmake3 --help' for more information." },
   { 0, 0 }
 };
 
@@ -198,7 +198,7 @@ int do_cmake(int ac, char const* const* av)
 
     hcm.GetGeneratorDocumentation(generators);
 
-    doc.SetName("cmake");
+    doc.SetName("cmake3");
     doc.SetSection("Name", cmDocumentationName);
     doc.SetSection("Usage", cmDocumentationUsage);
     if (ac == 1) {
@@ -229,7 +229,7 @@ int do_cmake(int ac, char const* const* av)
     if (strcmp(av[i], "-i") == 0) {
       /* clang-format off */
       std::cerr <<
-        "The \"cmake -i\" wizard mode is no longer supported.\n"
+        "The \"cmake3 -i\" wizard mode is no longer supported.\n"
         "Use the -D option to set cache values on the command line.\n"
         "Use cmake-gui or ccmake for an interactive dialog.\n";
       /* clang-format on */
@@ -382,7 +382,7 @@ static int do_build(int ac, char const* const* av)
   if (dir.empty()) {
     /* clang-format off */
     std::cerr <<
-      "Usage: cmake --build <dir> [options] [-- [native-options]]\n"
+      "Usage: cmake3 --build <dir> [options] [-- [native-options]]\n"
       "Options:\n"
       CMAKE_BUILD_OPTIONS
       ;

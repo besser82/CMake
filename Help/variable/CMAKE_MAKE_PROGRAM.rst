@@ -60,6 +60,6 @@ to configure the project:
   the CMake cache then CMake will use the specified value.
 
 The ``CMAKE_MAKE_PROGRAM`` variable is set for use by project code.
-The value is also used by the :manual:`cmake(1)` ``--build`` and
-:manual:`ctest(1)` ``--build-and-test`` tools to launch the native
+The value is also used by the :manual:`cmake3(1)` ``--build`` and
+:manual:`ctest3(1)` ``--build-and-test`` tools to launch the native
 build process.

@@ -1,23 +1,23 @@
 .. cmake-manual-description: CMake Command-Line Reference
 
-cmake(1)
-********
+cmake3(1)
+*********
 
 Synopsis
 ========
 
 .. parsed-literal::
 
- cmake [<options>] (<path-to-source> | <path-to-existing-build>)
- cmake [(-D <var>=<value>)...] -P <cmake-script-file>
- cmake --build <dir> [<options>...] [-- <build-tool-options>...]
- cmake -E <command> [<options>...]
- cmake --find-package <options>...
+ cmake3 [<options>] (<path-to-source> | <path-to-existing-build>)
+ cmake3 [(-D <var>=<value>)...] -P <cmake-script-file>
+ cmake3 --build <dir> [<options>...] [-- <build-tool-options>...]
+ cmake3 -E <command> [<options>...]
+ cmake3 --find-package <options>...
 
 Description
 ===========
 
-The "cmake" executable is the CMake command-line interface.  It may be
+The "cmake3" executable is the CMake command-line interface.  It may be
 used to configure projects in scripts.  Project configuration settings
 may be specified on the command line with the -D option.
 
@@ -139,7 +139,7 @@ Build Tool Mode
 CMake provides a command-line signature to build an already-generated
 project binary tree::
 
- cmake --build <dir> [<options>...] [-- <build-tool-options>...]
+ cmake3 --build <dir> [<options>...] [-- <build-tool-options>...]
 
 This abstracts a native build tool's command-line interface with the
 following options:
@@ -163,16 +163,16 @@ following options:
 ``--``
   Pass remaining options to the native tool.
 
-Run ``cmake --build`` with no options for quick help.
+Run ``cmake3 --build`` with no options for quick help.
 
 Command-Line Tool Mode
 ======================
 
 CMake provides builtin command-line tools through the signature::
 
- cmake -E <command> [<options>...]
+ cmake3 -E <command> [<options>...]
 
-Run ``cmake -E`` or ``cmake -E help`` for a summary of commands.
+Run ``cmake3 -E`` or ``cmake3 -E help`` for a summary of commands.
 Available commands are:
 
 ``chdir <dir> <cmd> [<arg>...]``
@@ -265,7 +265,7 @@ Available commands are:
 UNIX-specific Command-Line Tools
 --------------------------------
 
-The following ``cmake -E`` commands are available only on UNIX:
+The following ``cmake3 -E`` commands are available only on UNIX:
 
 ``create_symlink <old> <new>``
   Create a symbolic link ``<new>`` naming ``<old>``.
@@ -273,7 +273,7 @@ The following ``cmake -E`` commands are available only on UNIX:
 Windows-specific Command-Line Tools
 -----------------------------------
 
-The following ``cmake -E`` commands are available only on Windows:
+The following ``cmake3 -E`` commands are available only on Windows:
 
 ``delete_regv <key>``
   Delete Windows registry value.
@@ -294,14 +294,14 @@ Find-Package Tool Mode
 
 CMake provides a helper for Makefile-based projects with the signature::
 
-  cmake --find-package <options>...
+  cmake3 --find-package <options>...
 
 This runs in a pkg-config like mode.
 
 Search a package using :command:`find_package()` and print the resulting flags
 to stdout.  This can be used to use cmake instead of pkg-config to find
 installed libraries in plain Makefile-based projects or in autoconf-based
-projects (via ``share/aclocal/cmake.m4``).
+projects (via ``share/aclocal/cmake3.m4``).
 
 .. note::
   This mode is not well-supported due to some technical limitations.

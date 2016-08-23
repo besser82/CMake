@@ -68,7 +68,7 @@ The options are:
   executable target will be built before this custom target.
 
   Arguments to ``COMMAND`` may use
-  :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  :manual:`generator expressions <cmake3-generator-expressions(7)>`.
   References to target names in generator expressions imply target-level
   dependencies.
 

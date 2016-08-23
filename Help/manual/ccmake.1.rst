@@ -1,19 +1,19 @@
 .. cmake-manual-description: CMake Curses Dialog Command-Line Reference
 
-ccmake(1)
-*********
+ccmake3(1)
+**********
 
 Synopsis
 ========
 
 .. parsed-literal::
 
- ccmake [<options>] (<path-to-source> | <path-to-existing-build>)
+ ccmake3 [<options>] (<path-to-source> | <path-to-existing-build>)
 
 Description
 ===========
 
-The "ccmake" executable is the CMake curses interface.  Project
+The "ccmake3" executable is the CMake curses interface.  Project
 configuration settings may be specified interactively through this
 GUI.  Brief instructions are provided at the bottom of the terminal
 when the program is running.

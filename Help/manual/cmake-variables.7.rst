@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Variables Reference
 
-cmake-variables(7)
-******************
+cmake3-variables(7)
+*******************
 
 .. only:: html
 

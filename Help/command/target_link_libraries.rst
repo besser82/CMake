@@ -81,8 +81,8 @@ See policy :policy:`CMP0028`.
 Arguments to ``target_link_libraries`` may use "generator expressions"
 with the syntax ``$<...>``.  Note however, that generator expressions
 will not be used in OLD handling of :policy:`CMP0003` or :policy:`CMP0004`.
-See the :manual:`cmake-generator-expressions(7)` manual for available
-expressions.  See the :manual:`cmake-buildsystem(7)` manual for more on
+See the :manual:`cmake3-generator-expressions(7)` manual for available
+expressions.  See the :manual:`cmake3-buildsystem(7)` manual for more on
 defining buildsystem properties.
 
 Libraries for a Target and/or its Dependents

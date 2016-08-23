@@ -13,8 +13,8 @@ other target also.  This property is overridden by the
 :policy:`CMP0022` is ``OLD`` or unset.
 
 Contents of ``INTERFACE_LINK_LIBRARIES`` may use "generator expressions"
-with the syntax ``$<...>``.  See the :manual:`cmake-generator-expressions(7)`
-manual for available expressions.  See the :manual:`cmake-buildsystem(7)`
+with the syntax ``$<...>``.  See the :manual:`cmake3-generator-expressions(7)`
+manual for available expressions.  See the :manual:`cmake3-buildsystem(7)`
 manual for more on defining buildsystem properties.
 
 Creating Relocatable Packages

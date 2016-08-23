@@ -36,7 +36,7 @@ The options are:
 ``CONFIGURATION <config>``
   Specify the build configuration (e.g. ``Debug``).  If not
   specified the ``CTEST_BUILD_CONFIGURATION`` variable will be checked.
-  Otherwise the ``-C <cfg>`` option given to the :manual:`ctest(1)`
+  Otherwise the ``-C <cfg>`` option given to the :manual:`ctest3(1)`
   command will be used, if any.
 
 ``FLAGS <flags>``

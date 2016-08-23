@@ -11,4 +11,4 @@ specified in the interface of ``foo``. This is done automatically by
 the :command:`target_link_libraries` command.
 
 This property supports generator expressions.  See the
-:manual:`cmake-generator-expressions(7)` manual for available expressions.
+:manual:`cmake3-generator-expressions(7)` manual for available expressions.

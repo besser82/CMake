@@ -24,13 +24,13 @@
 #include <form.h>
 
 static const char* cmDocumentationName[][2] = {
-  { 0, "  ccmake - Curses Interface for CMake." },
+  { 0, "  ccmake3 - Curses Interface for CMake." },
   { 0, 0 }
 };
 
 static const char* cmDocumentationUsage[][2] = {
-  { 0, "  ccmake <path-to-source>\n"
-       "  ccmake <path-to-existing-build>" },
+  { 0, "  ccmake3 <path-to-source>\n"
+       "  ccmake3 <path-to-existing-build>" },
   { 0, "Specify a source directory to (re-)generate a build system for "
        "it in the current working directory.  Specify an existing build "
        "directory to re-generate its build system." },
@@ -38,7 +38,7 @@ static const char* cmDocumentationUsage[][2] = {
 };
 
 static const char* cmDocumentationUsageNote[][2] = {
-  { 0, "Run 'ccmake --help' for more information." },
+  { 0, "Run 'ccmake3 --help' for more information." },
   { 0, 0 }
 };
 
@@ -93,7 +93,7 @@ int main(int argc, char const* const* argv)
     hcm.AddCMakePaths();
     std::vector<cmDocumentationEntry> generators;
     hcm.GetGeneratorDocumentation(generators);
-    doc.SetName("ccmake");
+    doc.SetName("ccmake3");
     doc.SetSection("Name", cmDocumentationName);
     doc.SetSection("Usage", cmDocumentationUsage);
     if (argc == 1) {
@@ -144,7 +144,7 @@ int main(int argc, char const* const* argv)
     endwin();
     std::cerr << "Window is too small. A size of at least "
               << cmCursesMainForm::MIN_WIDTH << " x "
-              << cmCursesMainForm::MIN_HEIGHT << " is required to run ccmake."
+              << cmCursesMainForm::MIN_HEIGHT << " is required to run ccmake3."
               << std::endl;
     return 1;
   }

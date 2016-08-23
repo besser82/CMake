@@ -8,7 +8,7 @@ C++ compiler.  If the feature is available with the C++ compiler, it will
 be listed in the :variable:`CMAKE_CXX_COMPILE_FEATURES` variable.
 
 The features listed here may be used with the :command:`target_compile_features`
-command.  See the :manual:`cmake-compile-features(7)` manual for information on
+command.  See the :manual:`cmake3-compile-features(7)` manual for information on
 compile features and a list of supported compilers.
 
 

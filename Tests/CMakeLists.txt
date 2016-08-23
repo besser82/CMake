@@ -249,7 +249,7 @@ if(BUILD_TESTING)
   endif()
 
   add_test(NAME CMake.Copyright
-    COMMAND cmake -P ${CMAKE_CURRENT_SOURCE_DIR}/CMakeCopyright.cmake)
+    COMMAND cmake3 -P ${CMAKE_CURRENT_SOURCE_DIR}/CMakeCopyright.cmake)
 
   # add a bunch of standard build-and-test style tests
   ADD_TEST_MACRO(CommandLineTest CommandLineTest)
@@ -2530,9 +2530,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
   file(COPY "${CMake_SOURCE_DIR}/Tests/MumpsCoverage/VistA-FOIA"
     DESTINATION "${CMake_BINARY_DIR}/Testing/MumpsCoverage")
   add_test(NAME CTestGTMCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/MumpsCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestGTMCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*ZZCOVTST.m.*Total LOC:.*30.*Percentage Coverage: 80.00*"
@@ -2548,9 +2548,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
   file(COPY "${CMake_SOURCE_DIR}/Tests/MumpsCoverage/VistA-FOIA"
     DESTINATION "${CMake_BINARY_DIR}/Testing/MumpsCacheCoverage")
   add_test(NAME CTestCacheCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/MumpsCacheCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestCacheCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*ZZCOVTST.m.*Total LOC:.*29.*Percentage Coverage: 86.21.*"
@@ -2566,9 +2566,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
   file(COPY "${CMake_SOURCE_DIR}/Tests/PythonCoverage/coveragetest"
     DESTINATION "${CMake_BINARY_DIR}/Testing/PythonCoverage")
   add_test(NAME CTestPythonCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/PythonCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestPythonCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*foo.py.*Total LOC:.*13.*Percentage Coverage: 84.62.*"
@@ -2584,9 +2584,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
   file(COPY "${CMake_SOURCE_DIR}/Tests/CoberturaCoverage/src"
     DESTINATION "${CMake_BINARY_DIR}/Testing/CoberturaCoverage")
   add_test(NAME CTestCoberturaCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/CoberturaCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestCoberturaCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*CoverageTest.java.*Total LOC:.*18.*Percentage Coverage: 72.22.*"
@@ -2603,9 +2603,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
   configure_file("${CMake_BINARY_DIR}/Testing/JacocoCoverage/Coverage/target/site/jacoco.xml.in"
     "${CMake_BINARY_DIR}/Testing/JacocoCoverage/Coverage/target/site/jacoco.xml")
   add_test(NAME CTestJacocoCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/JacocoCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestJacocoCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*CoverageTest.java.*Total LOC:.*17.*Percentage Coverage: 76.47*"
@@ -2622,9 +2622,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
     DESTINATION "${CMake_BINARY_DIR}/Testing/JavascriptCoverage"
     FILES_MATCHING PATTERN "*.js")
   add_test(NAME CTestJavascriptCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/JavascriptCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestJavascriptCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*test3.js.*Total LOC:.*49.*Percentage Coverage: 79.59*"
@@ -2640,9 +2640,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
     "${CMake_SOURCE_DIR}/Tests/DelphiCoverage/UTCovTest(UTCovTest.pas).html.in"
     "${CMake_BINARY_DIR}/Testing/DelphiCoverage/UTCovTest(UTCovTest.pas).html")
   add_test(NAME CTestDelphiCoverage
-    COMMAND cmake -E chdir
+    COMMAND cmake3 -E chdir
     ${CMake_BINARY_DIR}/Testing/DelphiCoverage
-    $<TARGET_FILE:ctest> -T Coverage --debug)
+    $<TARGET_FILE:ctest3> -T Coverage --debug)
   set_tests_properties(CTestDelphiCoverage PROPERTIES
       PASS_REGULAR_EXPRESSION
       "Process file.*UTCovTest.pas.*Total LOC:.*20.*Percentage Coverage: 95.*"
@@ -3232,9 +3232,9 @@ ${CMake_BINARY_DIR}/bin/cmake -DDIR=dev -P ${CMake_SOURCE_DIR}/Utilities/Release
       )
   endif()
 
-  add_test(NAME CMakeWizardTest COMMAND cmake -i)
+  add_test(NAME CMakeWizardTest COMMAND cmake3 -i)
   set_property(TEST CMakeWizardTest PROPERTY PASS_REGULAR_EXPRESSION
-    "The \"cmake -i\" wizard mode is no longer supported.")
+    "The \"cmake3 -i\" wizard mode is no longer supported.")
 
   # If the cache variable CMAKE_CONTRACT_PROJECTS is set
   # then the dashboard will run a contract with CMake test of that

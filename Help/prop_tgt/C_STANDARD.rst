@@ -25,7 +25,7 @@ be controlled with the :prop_tgt:`C_STANDARD_REQUIRED` target property.
 Additionally, the :prop_tgt:`C_EXTENSIONS` target property may be used to
 control whether compiler-specific extensions are enabled on a per-target basis.
 
-See the :manual:`cmake-compile-features(7)` manual for information on
+See the :manual:`cmake3-compile-features(7)` manual for information on
 compile features and a list of supported compilers.
 
 This property is initialized by the value of

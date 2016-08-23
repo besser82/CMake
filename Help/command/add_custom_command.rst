@@ -83,7 +83,7 @@ The options are:
   also be prepended to the command to allow the executable to run on
   the host.
   (Use the ``TARGET_FILE``
-  :manual:`generator expression <cmake-generator-expressions(7)>` to
+  :manual:`generator expression <cmake3-generator-expressions(7)>` to
   reference an executable later in the command line.)
   Additionally a target-level dependency will be added so that the
   executable target will be built before any target using this custom
@@ -92,7 +92,7 @@ The options are:
   recompiled.
 
   Arguments to ``COMMAND`` may use
-  :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  :manual:`generator expressions <cmake3-generator-expressions(7)>`.
   References to target names in generator expressions imply target-level
   dependencies, but NOT file-level dependencies.  List target names with
   the ``DEPENDS`` option to add file-level dependencies.
@@ -119,7 +119,7 @@ The options are:
   recompiled.
 
   Arguments to ``DEPENDS`` may use
-  :manual:`generator expressions <cmake-generator-expressions(7)>`.
+  :manual:`generator expressions <cmake3-generator-expressions(7)>`.
 
 ``IMPLICIT_DEPENDS``
   Request scanning of implicit dependencies of an input file.

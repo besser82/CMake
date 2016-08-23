@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Toolchains Reference
 
-cmake-toolchains(7)
-*******************
+cmake3-toolchains(7)
+********************
 
 .. only:: html
 
@@ -95,7 +95,7 @@ hidden visibility, if supported by the compiler.
 Cross Compiling
 ===============
 
-If :manual:`cmake(1)` is invoked with the command line parameter
+If :manual:`cmake3(1)` is invoked with the command line parameter
 ``-DCMAKE_TOOLCHAIN_FILE=path/to/file``, the file will be loaded early to set
 values for the compilers.
 The :variable:`CMAKE_CROSSCOMPILING` variable is set to true when CMake is

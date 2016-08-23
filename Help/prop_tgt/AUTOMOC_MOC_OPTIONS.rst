@@ -11,5 +11,5 @@ it is equivalent to the optional ``OPTIONS`` argument of the
 
 By default it is empty.
 
-See the :manual:`cmake-qt(7)` manual for more information on using CMake
+See the :manual:`cmake3-qt(7)` manual for more information on using CMake
 with Qt.

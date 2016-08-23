@@ -27,13 +27,13 @@
 #include <cmsys/SystemTools.hxx>
 
 static const char* cmDocumentationName[][2] = { { 0,
-                                                  "  cmake-gui - CMake GUI." },
+                                                  "  cmake3-gui - CMake GUI." },
                                                 { 0, 0 } };
 
 static const char* cmDocumentationUsage[][2] = {
-  { 0, "  cmake-gui [options]\n"
-       "  cmake-gui [options] <path-to-source>\n"
-       "  cmake-gui [options] <path-to-existing-build>" },
+  { 0, "  cmake3-gui [options]\n"
+       "  cmake3-gui [options] <path-to-source>\n"
+       "  cmake3-gui [options] <path-to-existing-build>" },
   { 0, 0 }
 };
 
@@ -65,7 +65,7 @@ int main(int argc, char** argv)
 
     std::vector<cmDocumentationEntry> generators;
     hcm.GetGeneratorDocumentation(generators);
-    doc.SetName("cmake");
+    doc.SetName("cmake3");
     doc.SetSection("Name", cmDocumentationName);
     doc.SetSection("Usage", cmDocumentationUsage);
     doc.AppendSection("Generators", generators);
@@ -123,11 +123,11 @@ int main(int argc, char** argv)
   app.installTranslator(&translator);
 
   // app setup
-  app.setApplicationName("CMakeSetup");
+  app.setApplicationName("CMake3Setup");
   app.setOrganizationName("Kitware");
   QIcon appIcon;
-  appIcon.addFile(":/Icons/CMakeSetup32.png");
-  appIcon.addFile(":/Icons/CMakeSetup128.png");
+  appIcon.addFile(":/Icons/CMake3Setup32.png");
+  appIcon.addFile(":/Icons/CMake3Setup128.png");
   app.setWindowIcon(appIcon);
 
   CMakeSetupDialog dialog;

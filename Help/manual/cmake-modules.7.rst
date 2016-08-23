@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Modules Reference
 
-cmake-modules(7)
-****************
+cmake3-modules(7)
+*****************
 
 .. only:: html
 

@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Properties Reference
 
-cmake-properties(7)
-*******************
+cmake3-properties(7)
+********************
 
 .. only:: html
 

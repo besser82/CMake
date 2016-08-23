@@ -1,7 +1,7 @@
 .. cmake-manual-description: CMake Developer Reference
 
-cmake-developer(7)
-******************
+cmake3-developer(7)
+*******************
 
 .. only:: html
 
@@ -202,29 +202,29 @@ documentation:
 
 ``generator``
  A CMake native build system generator.
- See the :manual:`cmake(1)` command-line tool's ``-G`` option.
+ See the :manual:`cmake3(1)` command-line tool's ``-G`` option.
 
 ``manual``
- A CMake manual page, like this :manual:`cmake-developer(7)` manual.
+ A CMake manual page, like this :manual:`cmake3-developer(7)` manual.
 
 ``module``
  A CMake module.
- See the :manual:`cmake-modules(7)` manual
+ See the :manual:`cmake3-modules(7)` manual
  and the :command:`include` command.
 
 ``policy``
  A CMake policy.
- See the :manual:`cmake-policies(7)` manual
+ See the :manual:`cmake3-policies(7)` manual
  and the :command:`cmake_policy` command.
 
 ``prop_cache, prop_dir, prop_gbl, prop_sf, prop_inst, prop_test, prop_tgt``
  A CMake cache, directory, global, source file, installed file, test,
- or target property, respectively.  See the :manual:`cmake-properties(7)`
+ or target property, respectively.  See the :manual:`cmake3-properties(7)`
  manual and the :command:`set_property` command.
 
 ``variable``
  A CMake language variable.
- See the :manual:`cmake-variables(7)` manual
+ See the :manual:`cmake3-variables(7)` manual
  and the :command:`set` command.
 
 Documentation objects in the CMake Domain come from two sources.
@@ -598,7 +598,7 @@ range and name)
   #  License text for the above reference.)
 
 Test the documentation formatting by running
-``cmake --help-module <module-name>``, and also by enabling the
+``cmake3 --help-module <module-name>``, and also by enabling the
 ``SPHINX_HTML`` and ``SPHINX_MAN`` options to build the documentation.
 Edit the comments until generated documentation looks satisfactory.  To
 have a .cmake file in this directory NOT show up in the modules
@@ -988,7 +988,7 @@ The ``RELEASE`` variant should be listed first in the property
 so that that variant is chosen if the user uses a configuration which is
 not an exact match for any listed ``IMPORTED_CONFIGURATIONS``.
 
-Most of the cache variables should be hidden in the ``ccmake`` interface unless
+Most of the cache variables should be hidden in the ``ccmake3`` interface unless
 the user explicitly asks to edit them.
 
 .. code-block:: cmake

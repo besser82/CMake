@@ -32,7 +32,7 @@ The options are:
 
 ``CMAKE_FLAGS <flags>...``
   Specify flags of the form ``-DVAR:TYPE=VALUE`` to be passed to
-  the ``cmake`` command-line used to drive the test build.
+  the ``cmake3`` command-line used to drive the test build.
   The example in :command:`try_compile` shows how values for variables
   ``INCLUDE_DIRECTORIES``, ``LINK_DIRECTORIES``, and ``LINK_LIBRARIES``
   are used.

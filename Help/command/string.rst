@@ -189,7 +189,7 @@ GENEX_STRIP
 
   string(GENEX_STRIP <input string> <output variable>)
 
-Strip any :manual:`generator expressions <cmake-generator-expressions(7)>`
+Strip any :manual:`generator expressions <cmake3-generator-expressions(7)>`
 from the ``input string`` and store the result in the ``output variable``.
 
 Comparison
