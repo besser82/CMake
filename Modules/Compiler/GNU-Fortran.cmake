@@ -9,7 +9,7 @@ set(CMAKE_Fortran_FORMAT_FREE_FLAG "-ffree-form")
 
 # No -DNDEBUG for Fortran.
 string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
-string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
+string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
 
 # No -isystem for Fortran because it will not find .mod files.
 unset(CMAKE_INCLUDE_SYSTEM_FLAG_Fortran)

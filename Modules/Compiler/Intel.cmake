@@ -22,7 +22,7 @@ else()
     string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
     string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g")
     string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os")
-    string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3")
+    string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2")
     string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
 
     set(CMAKE_${lang}_COMPILER_PREDEFINES_COMMAND "${CMAKE_${lang}_COMPILER}" "-QdM" "-P" "-Za" "${CMAKE_ROOT}/Modules/CMakeCXXCompilerABI.cpp")

@@ -18,7 +18,7 @@ macro(__compiler_pgi lang)
   string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
   string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g -O0")
   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -O2 -s")
-  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -fast -O3")
+  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -fast -O2")
   # -Mipa was dropped with PGI 16.3 from Windows versions
   if(NOT CMAKE_HOST_WIN32 OR CMAKE_${lang}_COMPILER_VERSION VERSION_LESS 16.3)
     string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -Mipa=fast")

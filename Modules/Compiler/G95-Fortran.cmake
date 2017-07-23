@@ -1,7 +1,7 @@
 string(APPEND CMAKE_Fortran_FLAGS_INIT " ")
 string(APPEND CMAKE_Fortran_FLAGS_DEBUG_INIT " -g")
 string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
-string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
+string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
 string(APPEND CMAKE_Fortran_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
 set(CMAKE_Fortran_MODDIR_FLAG "-fmod=")
 set(CMAKE_Fortran_VERBOSE_FLAG "-v")
